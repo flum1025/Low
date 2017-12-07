@@ -1,21 +1,19 @@
-# low
+# Low
 
-> WOL Sender
+WOL Sender made with Vue.js
 
-## Build Setup
+## Install
 
-``` bash
-# install dependencies
+```bash
+# install dependencied
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# start server
+ADDRESS=192.168.1.255 MACHINES='[{"name":"Machine1","ip":"192.168.1.1","mac":"ff:ff:ff:ff:ff"}]' npm run start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Docker
+
+```bash
+docker run -p 3000:3000 -e ADDRESS=192.168.1.255 -e MACHINES='[{"name":"Machine1","ip":"192.168.1.1","mac":"ff:ff:ff:ff:ff"}]' flum1025/low
+```
